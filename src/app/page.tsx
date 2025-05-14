@@ -26,6 +26,7 @@ export default function Home() {
           <a
             href="https://github.com/josmaralejandro"
             className="mr-4 cursor-pointer hover:scale-110 transition-transform duration-200"
+            target="_blank"
           >
             <Image
               src="/github.svg"
@@ -37,6 +38,7 @@ export default function Home() {
           <a
             href="https://gitlab.com/josmaralejandro"
             className="mr-4 cursor-pointer hover:scale-110 transition-transform duration-200"
+            target="_blank"
           >
             <Image
               src="/gitlab.svg"
@@ -48,6 +50,7 @@ export default function Home() {
           <a
             href="mailto:josmar@josmarmunoz.dev"
             className="mr-4 cursor-pointer hover:scale-110 transition-transform duration-200"
+            target="_blank"
           >
             <Image
               src="/mail.svg"
