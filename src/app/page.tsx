@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Home() {
   return (
-    <div className="w-screen h-screen flex flex-col justify-between items-center font-[family-name:var(--font-geist-sans)]">
+    <div className="w-screen h-dvh flex flex-col justify-between items-center font-[family-name:var(--font-geist-sans)]">
       <main className="my-auto flex flex-col md:flex-row items-center w-2/3 md:h-1/2 mx-auto md:pt-16">
         <h1 className="text-4xl md:text-7xl font-bold text-center">
           Josmar Muñoz
