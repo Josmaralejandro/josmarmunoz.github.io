@@ -1,3 +1,6 @@
+import ProjectCard from './components/ProjectCard'
+import HeroSection from './components/HeroSection'
+
 const projects = [
   {
     number: "01",
@@ -70,43 +73,7 @@ export default function Home() {
       </nav>
 
       {/* ── Hero ── */}
-      <section
-        id="hero"
-        className="min-h-screen flex flex-col justify-center px-8 md:px-16 pt-24 pb-16"
-      >
-        <div className="max-w-7xl mx-auto w-full">
-          <p className="text-xs tracking-[0.4em] uppercase text-[#f97316] mb-8">
-            Frontend Team Leader · 8+ Years
-          </p>
-
-          <h1
-            className="font-bold leading-none tracking-tight"
-            style={{ fontSize: "clamp(4rem, 15vw, 14rem)" }}
-          >
-            <span className="block text-white">Josmar</span>
-            <span
-              className="block"
-              style={{
-                color: "transparent",
-                WebkitTextStroke: "2px #ffffff",
-              }}
-            >
-              Muñoz
-            </span>
-          </h1>
-
-          <div className="mt-12 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-            <p className="text-lg max-w-md leading-relaxed text-[#a3a3a3]">
-              Full Stack Engineer building scalable web products for UK &amp; US
-              companies. Specialised in React, Next.js, and frontend architecture.
-            </p>
-            <div className="flex items-center gap-3 text-sm text-[#a3a3a3]">
-              <span className="inline-block h-px w-8 bg-[#f97316]" />
-              <span>Scroll to explore</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* ── About ── */}
       <section
@@ -172,33 +139,14 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1a1a1a]">
             {projects.map((project) => (
-              <a
+              <ProjectCard
                 key={project.number}
-                href={project.link}
-                className="group bg-[#0a0a0a] hover:bg-[#111111] p-8 transition-colors duration-200 block"
-              >
-                <div className="flex items-start justify-between mb-6">
-                  <span className="text-xs font-mono text-[#333333]">
-                    {project.number}
-                  </span>
-                  <span className="text-lg text-[#f97316] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                    ↗
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold mb-3 group-hover:text-[#f97316] transition-colors duration-200">
-                  {project.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-[#a3a3a3] mb-6">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  {project.tech.map((t) => (
-                    <span key={t} className="text-xs font-mono text-[#555555]">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </a>
+                number={project.number}
+                title={project.title}
+                description={project.description}
+                tech={project.tech}
+                link={project.link}
+              />
             ))}
           </div>
         </div>
