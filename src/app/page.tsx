@@ -1,29 +1,30 @@
+import Image from 'next/image'
 import ProjectCard from './components/ProjectCard'
 import HeroSection from './components/HeroSection'
 
 const projects = [
   {
     number: "01",
-    title: "Project Name",
+    title: "Pretty Technical — Platform",
     description:
-      "A short description of what this project does, the problem it solves, and the impact it had.",
-    tech: ["React", "Next.js", "TypeScript"],
+      "Led frontend architecture and delivery for a platform with thousands of daily active users. Defined standards, owned high-risk releases, and built across multiple concurrent product streams ",
+    tech: ["React", "Next.js", "TypeScript", "Node.js", "Jest", "React Testing Library"],
     link: "#",
   },
   {
     number: "02",
-    title: "Project Name",
+    title: "Magic Wish — Android App",
     description:
-      "A short description of what this project does, the problem it solves, and the impact it had.",
-    tech: ["Node.js", "PostgreSQL", "Docker"],
+      "Built mobile UI features for an Android application using React Native, collaborating closely with designers and backend developers to ship a polished, production-ready product.",
+    tech: ["React Native", "JavaScript"],
     link: "#",
   },
   {
     number: "03",
-    title: "Project Name",
+    title: "FYLD — Blockchain Witnessing",
     description:
-      "A short description of what this project does, the problem it solves, and the impact it had.",
-    tech: ["React Native", "GraphQL", "AWS"],
+      "Built backend services in Golang powering a blockchain-based data witnessing solution. Integrated PostgreSQL and the Bitcoin Cash API, contributing to system reliability and data integrity in a distributed environment.",
+    tech: ["Golang", "PostgreSQL", "Bitcoin Cash API", "Docker"],
     link: "#",
   },
 ]
@@ -59,11 +60,14 @@ export default function Home() {
 
       {/* ── Nav ── */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 bg-[#0a0a0a]/80 backdrop-blur-sm">
-        <a
-          href="#hero"
-          className="text-sm font-bold tracking-widest text-[#f97316]"
-        >
-          JM
+        <a href="#hero" className="block">
+          <Image
+            src="/logo.svg"
+            alt="Josmar Muñoz"
+            width={32}
+            height={38}
+            className="hover:opacity-80 transition-opacity duration-200"
+          />
         </a>
         <div className="flex gap-8 text-xs tracking-widest uppercase text-[#a3a3a3]">
           <a href="#about" className="hover:text-white transition-colors duration-200">About</a>
@@ -81,7 +85,7 @@ export default function Home() {
         className="py-32 px-8 md:px-16 border-t border-[#1a1a1a]"
       >
         <div className="max-w-7xl mx-auto">
-          <p className="text-xs tracking-[0.4em] uppercase text-[#f97316] mb-16">
+          <p className="text-xs tracking-[0.4em] uppercase text-[#05c898] mb-16">
             About
           </p>
 
@@ -92,10 +96,10 @@ export default function Home() {
                 Engineering that scales — teams and products alike.
               </h2>
               <p className="leading-relaxed text-[#a3a3a3] mb-6">
-                Full Stack Engineer with 8+ years of experience delivering web applications
+                Software Engineer with 8+ years of experience delivering web applications
                 for UK and US-based companies in fully remote environments. Currently
-                Frontend Team Leader at Pretty Technical Limited, where I define
-                architecture, lead hiring, and ship production code daily.
+                Software Engineer at Pretty Technical, where I define
+                architecture, code standards and ship production code daily.
               </p>
               <p className="leading-relaxed text-[#a3a3a3]">
                 Frontend-focused at heart — deep expertise in React and Next.js,
@@ -113,7 +117,7 @@ export default function Home() {
                 {skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 text-sm border border-[#2a2a2a] text-[#a3a3a3] hover:border-[#f97316] hover:text-white transition-colors duration-200 cursor-default"
+                    className="px-4 py-2 text-sm border border-[#2a2a2a] text-[#a3a3a3] hover:border-[#05c898] hover:text-white transition-colors duration-200 cursor-default"
                   >
                     {skill}
                   </span>
@@ -131,10 +135,9 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-16">
-            <p className="text-xs tracking-[0.4em] uppercase text-[#f97316]">
+            <p className="text-xs tracking-[0.4em] uppercase text-[#05c898]">
               Projects
             </p>
-            <p className="text-xs text-[#a3a3a3]">Selected work</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1a1a1a]">
@@ -158,7 +161,7 @@ export default function Home() {
         className="py-32 px-8 md:px-16 border-t border-[#1a1a1a]"
       >
         <div className="max-w-7xl mx-auto">
-          <p className="text-xs tracking-[0.4em] uppercase text-[#f97316] mb-8">
+          <p className="text-xs tracking-[0.4em] uppercase text-[#05c898] mb-8">
             Contact
           </p>
 
@@ -171,7 +174,7 @@ export default function Home() {
               className="block"
               style={{
                 color: "transparent",
-                WebkitTextStroke: "2px #f97316",
+                WebkitTextStroke: "2px #05c898",
               }}
             >
               something.
@@ -202,7 +205,7 @@ export default function Home() {
 
           <div className="mt-16 pt-8 border-t border-[#1a1a1a] flex justify-between text-xs text-[#333333]">
             <span>© 2026 Josmar Muñoz</span>
-            <span>Frontend Team Leader</span>
+            <span>Software Engineer</span>
           </div>
         </div>
       </footer>

@@ -32,7 +32,7 @@ export default function ProjectCard({ number, title, description, tech, link }: 
     if (glareRef.current) {
       const glareX = (x / rect.width) * 100
       const glareY = (y / rect.height) * 100
-      glareRef.current.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(249, 115, 22, 0.12) 0%, transparent 65%)`
+      glareRef.current.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(5, 200, 152, 0.12) 0%, transparent 65%)`
       glareRef.current.style.opacity = '1'
     }
   }
@@ -67,14 +67,14 @@ export default function ProjectCard({ number, title, description, tech, link }: 
       />
 
       {/* Orange border on hover */}
-      <div className="absolute inset-0 border border-transparent group-hover:border-[#f97316]/30 transition-colors duration-300 pointer-events-none" />
+      <div className="absolute inset-0 border border-transparent group-hover:border-[#05c898]/30 transition-colors duration-300 pointer-events-none" />
 
       <div className="flex items-start justify-between mb-6">
         <span className="text-xs font-mono text-[#333333]">{number}</span>
-        <span className="text-lg text-[#f97316] opacity-0 group-hover:opacity-100 transition-opacity duration-200">↗</span>
+        <span className="text-lg text-[#05c898] opacity-0 group-hover:opacity-100 transition-opacity duration-200">↗</span>
       </div>
 
-      <h3 className="text-xl font-bold mb-3 group-hover:text-[#f97316] transition-colors duration-200">
+      <h3 className="text-xl font-bold mb-3 group-hover:text-[#05c898] transition-colors duration-200">
         {title}
       </h3>
 

@@ -64,10 +64,10 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto w-full">
         <p
           ref={layer4Ref}
-          className="text-xs tracking-[0.4em] uppercase text-[#f97316] mb-8 inline-block"
+          className="text-xs tracking-[0.4em] uppercase text-[#05c898] mb-8 inline-block"
           style={{ willChange: 'transform' }}
         >
-          Frontend Team Leader · 8+ Years
+          Software Engineer · 8+ Years
         </p>
 
         <h1
@@ -101,11 +101,11 @@ export default function HeroSection() {
             className="text-lg max-w-md leading-relaxed text-[#a3a3a3]"
             style={{ willChange: 'transform' }}
           >
-            Full Stack Engineer building scalable web products for UK &amp; US
+            Software Engineer building scalable web products for UK &amp; US
             companies. Specialised in React, Next.js, and frontend architecture.
           </p>
           <div className="flex items-center gap-3 text-sm text-[#a3a3a3]">
-            <span className="inline-block h-px w-8 bg-[#f97316]" />
+            <span className="inline-block h-px w-8 bg-[#05c898]" />
             <span>Scroll to explore</span>
           </div>
         </div>
